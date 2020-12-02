@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form method="GET" action="http://localhost:3000/login">
+            <label id="user">
+                <p>Nombre de usuario:<input type="text" name="user" placeholder="Escriba su nombre de usuario" required></p>
+            </label>
+            <label id="password">
+                <p>Contraseña:<input type="password" name="password" placeholder="Escriba su contraseña" required></p>
+            </label>
+            <label id="key">
+                <p>Llave:<input type="text" name="key" placeholder="Se te asignará una" required></p>
+            </label>
+            <input type="submit" value="Enviar">
+        </form>
+        <form method="POST" action="http://localhost:3000/contacto" enctype="multipart/form-data">
+            <label id="nombre">
+                <p>Nombre:<input type="text" name="nombre" placeholder="Escriba aquí su nombre" required></p>
+            </label>
+            <label id="email">
+                <p>Email:<input type="email" name="email" placeholder="Escriba aquí su email" required></p>
+            </label>
+            <input type="submit" value="Enviar">
+        </form>
+        <form method="GET" action="http://localhost:3000/sendMessage">
+            <label id="from">
+                <p>Para:<input type="email" name="from" placeholder="Elige a quien quieres enviar el mensaje" required></p>
+            </label>
+            <label id="to">
+                <p>De:<input type="email" name="to" placeholder="Escribe el remitente" required></p>
+            </label>
+            <label id="message">
+                <p>Mensaje:<textarea type="textarea" rows="5" cols="50">Escribe aquí tu comentario:</textarea></p>
+            </label>
+            <label id="time">
+                <p>Fecha:<input type="datetime" name="time"  value="<?php echo date('d/m/Y',time());?>"required></p>
+            </label>
+            <input type="submit" value="Enviar mensaje">
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>
